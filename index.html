@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baker Street Apartments | Plant City, FL</title>
+    <meta name="description" content="Baker Street Apartments in Plant City, FL offers modern, spacious living with comfort, convenience, and a welcoming community. Schedule a tour today!">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/favicon" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Baker Street Apartments | Plant City, FL">
+    <meta property="og:description" content="Modern, spacious apartments in Plant City, FL. Comfort, convenience, and a welcoming community. Schedule a tour today!">
+    <meta property="og:image" content="images/Kitchen1.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <!-- Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ApartmentComplex",
+      "name": "Baker Street Apartments",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "507 W Baker Street",
+        "addressLocality": "Plant City",
+        "addressRegion": "FL",
+        "postalCode": "33563",
+        "addressCountry": "US"
+      },
+      "telephone": "",
+      "url": "https://yourdomain.com/",
+      "image": "images/Kitchen1.jpg"
+    }
+    </script>
+    <style>
+        :root {
+            --bg-color: #f5f0e6;
+            --text-color: #2f2f2f;
+            --accent-green: #3a5a40;
+            --accent-red: #b12e2e;
+            --accent-orange: #d95f02;
+            --accent-yellow: #f2c94c;
+            --border-color: #a35a3c;
+            --panel-color: #fff8ec;
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+        .navbar {
+            background: var(--accent-green);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .navbar-center {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar-right {
+            position: absolute;
+            right: 30px;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .main-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 1px;
+            padding: 0 20px;
+            transition: color 0.2s;
+        }
+        .main-link:hover {
+            color: var(--accent-yellow);
+        }
+        .contact-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            opacity: 0.85;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+        .contact-link:hover {
+            color: var(--accent-yellow);
+        }
+        .hero {
+            position: relative;
+            background: url('images/Kitchen1.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(58,90,64,0.55);
+        }
+        .hero-content {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px rgba(58,90,64,0.18);
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 8px rgba(58,90,64,0.12);
+        }
+        .cta-btn,
+        button.cta-btn,
+        #openContactModal,
+        #contactForm button {
+            background: linear-gradient(90deg, var(--accent-yellow) 0%, var(--accent-orange) 100%);
+            color: var(--accent-green);
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(242,201,76,0.18);
+        }
+        .cta-btn:hover,
+        button.cta-btn:hover,
+        #openContactModal:hover,
+        #contactForm button:hover {
+            background: linear-gradient(90deg, var(--accent-orange) 0%, var(--accent-yellow) 100%);
+            color: #fff;
+            box-shadow: 0 6px 24px rgba(217,95,2,0.18);
+        }
+        .content-section {
+            background: var(--panel-color);
+            max-width: 900px;
+            margin: -60px auto 40px auto;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 40px 30px;
+            position: relative;
+            z-index: 2;
+            border-top: 5px solid var(--border-color);
+        }
+        .content-section h2 {
+            color: var(--accent-green);
+        }
+        .content-section h3 {
+            color: var(--accent-orange);
+        }
+        .floating-bubble {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent-yellow);
+            color: var(--accent-green);
+            padding: 18px 32px;
+            border-radius: 50px;
+            box-shadow: 0 4px 16px rgba(242,201,76,0.25);
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            z-index: 1000;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .floating-bubble:hover {
+            background: var(--accent-orange);
+            color: #fff;
+            transform: scale(1.05);
+        }
+        /* Gallery images */
+        #gallery img {
+            border: 3px solid var(--border-color);
+            background: #fff;
+        }
+        /* Google Maps section */
+        .content-section iframe {
+            border: 2px solid var(--accent-green);
+        }
+        /* Responsive */
+        @media (max-width: 700px) {
+            .hero-content h1 { font-size: 2rem; }
+            .content-section { padding: 20px 10px; }
+        }
+        @media (max-width: 600px) {
+            .floating-bubble {
+                padding: 14px 18px;
+                font-size: 1rem;
+                right: 16px;
+                bottom: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" aria-label="Main Navigation">
+        <div class="navbar-center">
+            <a href="https://showmojo.com/6678f6a00f/l" target="_blank" rel="noopener" class="main-link">Schedule a Showing</a>
+        </div>
+        <div class="navbar-right">
+            <a href="#" class="contact-link" id="openContactModal">Contact Us</a>
+        </div>
+    </nav>
+    <!-- Floating Schedule a Showing Bubble -->
+    <a href="https://showmojo.com/6678f6a00f/l" target="_blank" rel="noopener" class="floating-bubble" aria-label="Schedule a Showing">
+        Schedule a Showing
+    </a>
+    <header class="hero" role="banner">
+        <div class="hero-content">
+            <h1>Welcome to Baker Street Apartments</h1>
+            <p>Modern living in the heart of Plant City.<br><strong>Ready to see your new home?</strong></p>
+            <a href="https://showmojo.com/6678f6a00f/l" target="_blank" rel="noopener" class="cta-btn" style="font-size:1.3rem; padding:20px 50px; box-shadow:0 4px 16px rgba(227,176,75,0.25);">
+                Schedule Your Tour Today!
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="content-section" id="about" style="margin-top:40px;">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:18px;">About Baker Street Apartments</h2>
+            <p style="font-size:1.15rem; line-height:1.7; max-width:700px; margin:0 auto 20px auto; text-align:center;">
+                Baker Street Apartments is a welcoming community in the heart of Plant City, Florida. Our spacious apartment homes are designed for comfort and convenience, offering a peaceful retreat while keeping you close to everything you need. Whether you’re looking for a quiet place to relax or a vibrant neighborhood to explore, Baker Street Apartments is the perfect place to call home.
+            </p>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;margin-top:30px;">
+                <div style="flex:1 1 250px;max-width:350px;">
+                    <h3 style="font-size:1.2rem;margin-bottom:10px;">Our Commitment</h3>
+                    <p style="font-size:1rem;line-height:1.6;">
+                        At Baker Street Apartments, we are committed to providing a clean, safe, and friendly environment for all residents. Our dedicated management team is here to ensure your living experience is comfortable and enjoyable. We take pride in our community and strive to exceed your expectations every day.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="content-section" id="gallery" style="margin-top:30px;">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:18px;">Gallery</h2>
+            <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+                <img src="images/Kitchen1.jpg" alt="Modern kitchen at Baker Street Apartments" style="width:250px;height:170px;object-fit:cover;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                <img src="images/LivingRoom.jpg" alt="Spacious living room at Baker Street Apartments" style="width:250px;height:170px;object-fit:cover;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                <img src="images/Bathroom.jpg" alt="Updated bathroom at Baker Street Apartments" style="width:250px;height:170px;object-fit:cover;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                <!-- Add more images as needed -->
+            </div>
+        </section>
+        <section class="content-section" id="comfort">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:18px;">Comfort &amp; Convenience in Plant City</h2>
+            <p style="font-size:1.15rem; line-height:1.7; max-width:700px; margin:0 auto 20px auto; text-align:center;">
+                Baker Street Apartments offers spacious layouts, stylish finishes, and a welcoming community atmosphere in the heart of Plant City.
+            </p>
+            <h3 style="margin-top:40px; text-align:center;">Book Your Tour</h3>
+            <div style="text-align:center; margin-top:30px;">
+                <a href="https://showmojo.com/6678f6a00f/l" target="_blank" rel="noopener" class="cta-btn" style="font-size:1.2rem; padding:18px 48px;">
+                    Schedule a Showing
+                </a>
+            </div>
+        </section>
+        <section class="content-section" id="location" style="text-align:center; margin-top:0;">
+            <h2 style="font-size:2rem; margin-bottom:18px;">Find Us</h2>
+            <div style="display:flex;justify-content:center;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3522.282245792504!2d-82.13350268494036!3d28.01815998267345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c26f2a2b2e6e1b%3A0x8b2e2e2e2e2e2e2e!2s507%20W%20Baker%20St%2C%20Plant%20City%2C%20FL%2033563!5e0!3m2!1sen!2sus!4v1718399999999!5m2!1sen!2sus"
+                    width="100%"
+                    height="350"
+                    style="border:0; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08); max-width:700px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Baker Street Apartments Location"
+                ></iframe>
+            </div>
+        </section>
+        <section class="content-section" id="contact" style="background:#f8fafc; margin-bottom:40px;">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:10px;">Contact Baker Street Apartments</h2>
+            <address style="text-align:center; color:#444; margin-bottom:30px;">
+                507 W Baker Street, Plant City, FL 33563
+            </address>
+            <div style="display:flex;flex-direction:column;align-items:center;">
+                <a href="#" id="openContactModalBottom" class="cta-btn" style="font-size:1.1rem;padding:16px 44px;margin-bottom:18px;">
+                    Ask Us Anything
+                </a>
+                <p style="color:#666;max-width:400px;text-align:center;font-size:1rem;">
+                    Have a question about availability, pricing, or the neighborhood? We're here to help!
+                </p>
+            </div>
+        </section>
+    </main>
+    <!-- Contact Modal -->
+    <div id="contactModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(45,58,75,0.45);z-index:2000;align-items:center;justify-content:center;">
+        <div style="background:#fff;padding:32px 24px 24px 24px;border-radius:12px;max-width:400px;width:90%;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;">
+            <button id="closeContactModal" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#2d3a4b;" aria-label="Close">&times;</button>
+            <h2 style="margin-top:0;text-align:center;">Ask Us Anything</h2>
+            <p style="text-align:center;">
+                Fill out the form below and our team will get back to you promptly.
+            </p>
+            <form id="contactForm" style="display:flex;flex-direction:column;gap:15px;" autocomplete="on">
+                <label for="contactName" style="font-weight:600;">Name</label>
+                <input id="contactName" name="name" type="text" placeholder="Your Name" required style="padding:12px;border-radius:6px;border:1px solid #ccc;">
+                <label for="contactEmail" style="font-weight:600;">Email</label>
+                <input id="contactEmail" name="email" type="email" placeholder="Your Email" required style="padding:12px;border-radius:6px;border:1px solid #ccc;">
+                <label for="contactMessage" style="font-weight:600;">Message</label>
+                <textarea id="contactMessage" name="message" placeholder="Your Message" required style="padding:12px;border-radius:6px;border:1px solid #ccc;min-height:80px;"></textarea>
+                <button type="submit" class="cta-btn" style="width:100%;font-size:1.1rem;">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Open modal on Contact Us link (top) or Ask Us Anything link (bottom)
+        document.getElementById('openContactModal').onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('contactModal').style.display = 'flex';
+        };
+        document.getElementById('openContactModalBottom').onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('contactModal').style.display = 'flex';
+        };
+        // Close modal on X button click or outside modal click
+        document.getElementById('closeContactModal').onclick = function() {
+            document.getElementById('contactModal').style.display = 'none';
+        };
+        window.onclick = function(event) {
+            var modal = document.getElementById('contactModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
