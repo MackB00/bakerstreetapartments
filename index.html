@@ -28,7 +28,7 @@
         "postalCode": "33563",
         "addressCountry": "US"
       },
-      "telephone": "",
+      "telephone": "813.590.1212",
       "url": "https://yourdomain.com/",
       "image": "images/Kitchen1.jpg"
     }
@@ -108,7 +108,7 @@
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(58,90,64,0.55);
+            background: rgba(58,90,64,0.25);
         }
         .hero-content {
             position: relative;
@@ -216,21 +216,21 @@
 <body>
     <nav class="navbar" aria-label="Main Navigation">
         <div class="navbar-center">
-            <a href="https://showmojo.com/6678f6a00f/l" target="_blank" rel="noopener" class="main-link">Schedule a Showing</a>
+            <a href="https://showmojo.com/6678f6a00f/listings/mapsearch/p/56634" target="_blank" rel="noopener" class="main-link">Schedule a Showing</a>
         </div>
         <div class="navbar-right">
             <a href="#" class="contact-link" id="openContactModal">Contact Us</a>
         </div>
     </nav>
     <!-- Floating Schedule a Showing Bubble -->
-    <a href="https://showmojo.com/6678f6a00f/l" target="_blank" rel="noopener" class="floating-bubble" aria-label="Schedule a Showing">
+    <a href="https://showmojo.com/6678f6a00f/listings/mapsearch/p/56634" target="_blank" rel="noopener" class="floating-bubble" aria-label="Schedule a Showing">
         Schedule a Showing
     </a>
     <header class="hero" role="banner">
         <div class="hero-content">
             <h1>Welcome to Baker Street Apartments</h1>
             <p>Modern living in the heart of Plant City.<br><strong>Ready to see your new home?</strong></p>
-            <a href="https://showmojo.com/6678f6a00f/l" target="_blank" rel="noopener" class="cta-btn" style="font-size:1.3rem; padding:20px 50px; box-shadow:0 4px 16px rgba(227,176,75,0.25);">
+            <a href="https://showmojo.com/6678f6a00f/listings/mapsearch/p/56634" target="_blank" rel="noopener" class="cta-btn" style="font-size:1.3rem; padding:20px 50px; box-shadow:0 4px 16px rgba(227,176,75,0.25);">
                 Schedule Your Tour Today!
             </a>
         </div>
@@ -266,7 +266,7 @@
             </p>
             <h3 style="margin-top:40px; text-align:center;">Book Your Tour</h3>
             <div style="text-align:center; margin-top:30px;">
-                <a href="https://showmojo.com/6678f6a00f/l" target="_blank" rel="noopener" class="cta-btn" style="font-size:1.2rem; padding:18px 48px;">
+                <a href="https://showmojo.com/6678f6a00f/listings/mapsearch/p/56634" target="_blank" rel="noopener" class="cta-btn" style="font-size:1.2rem; padding:18px 48px;">
                     Schedule a Showing
                 </a>
             </div>
@@ -286,22 +286,21 @@
                 ></iframe>
             </div>
         </section>
-        <section class="content-section" id="contact" style="background:#f8fafc; margin-bottom:40px;">
-            <h2 style="text-align:center; font-size:2rem; margin-bottom:10px;">Contact Baker Street Apartments</h2>
-            <address style="text-align:center; color:#444; margin-bottom:30px;">
-                507 W Baker Street, Plant City, FL 33563
-            </address>
-            <div style="display:flex;flex-direction:column;align-items:center;">
-                <a href="#" id="openContactModalBottom" class="cta-btn" style="font-size:1.1rem;padding:16px 44px;margin-bottom:18px;">
-                    Ask Us Anything
-                </a>
-                <p style="color:#666;max-width:400px;text-align:center;font-size:1rem;">
-                    Have a question about availability, pricing, or the neighborhood? We're here to help!
-                </p>
-            </div>
-        </section>
-    </main>
-    <!-- Contact Modal -->
+            <section class="content-section" id="contact" style="background:#f8fafc; margin-bottom:40px;">
+        <h2 style="text-align:center; font-size:2rem; margin-bottom:10px;">Contact Baker Street Apartments</h2>
+        <address style="text-align:center; color:#444; margin-bottom:30px;">
+            507 W Baker Street, Plant City, FL 33563<br>
+            Phone: <a href="tel:8135901212">813.590.1212</a>
+        </address>
+        <div style="display:flex;flex-direction:column;align-items:center;">
+            <a href="#" id="openContactModalBottom" class="cta-btn" style="font-size:1.1rem;padding:16px 44px;margin-bottom:18px;">
+                Ask Us Anything
+            </a>
+            <p style="color:#666;max-width:400px;text-align:center;font-size:1rem;">
+                Have a question about availability, pricing, or the neighborhood? We're here to help!
+            </p>
+        </div>
+    </section>
     <div id="contactModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(45,58,75,0.45);z-index:2000;align-items:center;justify-content:center;">
         <div style="background:#fff;padding:32px 24px 24px 24px;border-radius:12px;max-width:400px;width:90%;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;">
             <button id="closeContactModal" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#2d3a4b;" aria-label="Close">&times;</button>
@@ -309,7 +308,7 @@
             <p style="text-align:center;">
                 Fill out the form below and our team will get back to you promptly.
             </p>
-            <form id="contactForm" style="display:flex;flex-direction:column;gap:15px;" autocomplete="on">
+            <form id="contactForm" style="display:flex;flex-direction:column;gap:15px;" autocomplete="on" method="POST" action="https://formspree.io/f/mblkgqbk">
                 <label for="contactName" style="font-weight:600;">Name</label>
                 <input id="contactName" name="name" type="text" placeholder="Your Name" required style="padding:12px;border-radius:6px;border:1px solid #ccc;">
                 <label for="contactEmail" style="font-weight:600;">Email</label>
